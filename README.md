@@ -12,3 +12,10 @@ contains the Code for the switched ESP on the device, it takes the Serial data, 
 `uint8_t remoteMac[] = {0x6A, 0xC6, 0x3A, 0xC2, 0xFE, 0x7A};`
 
 has to be edited to your esp-now-server-mac-address
+# iobroker-skript 
+uses the javascript-adapter on iobroker, add the content from the espnow.js to your adapter. You need to install serialport on iobroker `npm install serialport` and the device has to be changed to your usb-device.
+``` 
+const port = new SerialPort('/dev/ttyUSB0', {
+    baudRate: 115200
+})
+``` 
